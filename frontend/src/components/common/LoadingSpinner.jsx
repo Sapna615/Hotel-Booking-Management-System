@@ -15,3 +15,4 @@ export default function LoadingSpinner({ text = 'Loading...', size = 'md' }) {
     </div>
   );
 }
+

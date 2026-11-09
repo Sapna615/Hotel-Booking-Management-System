@@ -93,7 +93,7 @@ cp .env.example .env
 ```
 Default `.env` configuration:
 ```env
-PORT=5000
+PORT=5001
 NODE_ENV=development
 CLIENT_URL=http://localhost:5173
 MONGODB_URI=mongodb://127.0.0.1:27017/hotel_booking_db
@@ -114,8 +114,8 @@ Run backend and frontend concurrently in separate terminal sessions:
 **Terminal 1 (Backend API Server):**
 ```bash
 npm run backend
-# Server will start on http://localhost:5000
-# Swagger API docs available at http://localhost:5000/api/docs
+# Server will start on http://localhost:5001
+# Swagger API docs available at http://localhost:5001/api/docs
 ```
 
 **Terminal 2 (Frontend Client):**
@@ -178,3 +178,4 @@ npm test
 | **UI/UX & Responsive Behavior** | 10 | Polished Tailwind CSS luxury design, responsive on mobile & desktop, status badges, real-time hold countdown, loading spinners, and empty states. |
 | **Testing & Reliability** | 15 | 17/17 passing automated tests with Jest and Supertest covering happy paths, negative date validation, parallel concurrency conflict, and state transitions. |
 | **Documentation & Demo Readiness** | 10 | Full README, Swagger UI (`/api/docs`), ER schema diagram, technical report, seed data, and 1-click demo accounts. |
+

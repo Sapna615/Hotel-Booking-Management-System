@@ -47,3 +47,4 @@ class AvailabilityController {
 }
 
 module.exports = AvailabilityController;
+

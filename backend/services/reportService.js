@@ -182,3 +182,4 @@ class ReportService {
 }
 
 module.exports = ReportService;
+

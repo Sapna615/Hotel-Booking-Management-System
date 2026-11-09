@@ -158,3 +158,4 @@ export default function SearchBar({ initialCheckIn = '', initialCheckOut = '', i
     </div>
   );
 }
+

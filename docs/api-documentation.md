@@ -228,3 +228,4 @@
 - **Route:** `/api/admin/audit-logs`
 - **Access:** Admin only
 - **Query Params:** `action`, `entityType`, `page`, `limit`
+

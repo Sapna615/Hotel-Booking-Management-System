@@ -7,3 +7,4 @@ router.get('/', validate(availabilityQuerySchema, 'query'), AvailabilityControll
 router.get('/room/:id', AvailabilityController.checkRoomAvailability);
 
 module.exports = router;
+

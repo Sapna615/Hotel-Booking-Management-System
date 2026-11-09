@@ -7,3 +7,4 @@ router.post('/simulate', authenticate, PaymentController.simulatePayment);
 router.get('/booking/:bookingId', authenticate, PaymentController.getPaymentsByBookingId);
 
 module.exports = router;
+

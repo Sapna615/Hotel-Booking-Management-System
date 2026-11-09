@@ -9,3 +9,4 @@ router.get('/occupancy', authenticate, authorize('admin', 'staff'), ReportContro
 router.get('/revenue', authenticate, authorize('admin'), ReportController.getRevenue);
 
 module.exports = router;
+

@@ -271,3 +271,4 @@ if (require.main === module) {
 }
 
 module.exports = seedDatabase;
+

@@ -50,3 +50,4 @@ roomOccupancySchema.index({ roomId: 1, night: 1 }, { unique: true });
 
 const RoomOccupancy = mongoose.model('RoomOccupancy', roomOccupancySchema);
 module.exports = RoomOccupancy;
+

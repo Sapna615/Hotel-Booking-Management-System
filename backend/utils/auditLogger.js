@@ -29,3 +29,4 @@ async function recordAuditLog(req, { action, entityType, entityId, details = {},
 module.exports = {
   recordAuditLog,
 };
+

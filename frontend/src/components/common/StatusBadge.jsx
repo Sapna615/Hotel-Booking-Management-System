@@ -49,3 +49,4 @@ export default function StatusBadge({ status, type = 'booking' }) {
     </span>
   );
 }
+

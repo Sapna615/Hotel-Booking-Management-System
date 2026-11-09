@@ -86,3 +86,4 @@ Shortlisted candidates must demonstrate and explain their own architecture durin
 - **Code Explainability:** Code is written cleanly with zero obfuscation.
 - **Traceability:** Every user action flows predictably: `Frontend UI` -> `Axios with Bearer Token` -> `Express Router` -> `Zod Validation` -> `Service Logic` -> `RoomOccupancy Compound Index` -> `AuditLog Record`.
 - **Debugging Ergonomics:** Centralized error handler formats exact error codes and validation arrays for instantaneous diagnosis during live code modification tasks.
+

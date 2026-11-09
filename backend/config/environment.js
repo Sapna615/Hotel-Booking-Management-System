@@ -4,7 +4,7 @@ const path = require('path');
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
 module.exports = {
-  PORT: process.env.PORT || 5000,
+  PORT: process.env.PORT || 5001,
   NODE_ENV: process.env.NODE_ENV || 'development',
   CLIENT_URL: process.env.CLIENT_URL || 'http://localhost:5173',
   MONGODB_URI: process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/hotel_booking_db',
@@ -14,3 +14,4 @@ module.exports = {
   TAX_RATE_PERCENT: 12,
   SERVICE_FEE_PERCENT: 5,
 };
+

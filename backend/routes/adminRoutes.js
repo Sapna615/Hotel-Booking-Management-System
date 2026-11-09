@@ -12,3 +12,4 @@ router.patch('/users/:id', validate(updateUserRoleSchema), AdminController.updat
 router.get('/audit-logs', AdminController.getAuditLogs);
 
 module.exports = router;
+

@@ -135,3 +135,4 @@ Double-booking prevention is enforced mathematically through **three defensive l
 3. **Input Sanitization & Schema Validation:** Powered by Zod schemas validating request body, query params, and parameters prior to reaching controllers.
 4. **Idempotency Keys:** Simulated payment API supports unique idempotency keys (`idempotencyKey`), preventing duplicate charges from accidental double clicks.
 5. **Audit Logging:** Every critical state transition (room creation, status changes, holds, confirmations, cancellations, check-in, check-out) is recorded in the `AuditLog` collection with actor ID, IP address, and metadata.
+

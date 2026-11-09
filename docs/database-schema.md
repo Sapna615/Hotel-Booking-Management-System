@@ -246,3 +246,4 @@ Immutable ledger of all high-impact business actions for governance and forensic
 | `details` | Mixed | Default `{}` | Structured event payload / snapshot |
 | `ipAddress` | String | Default `'127.0.0.1'` | Client IP address |
 | `createdAt` | Date | Index (Descending) | Timestamp of event |
+

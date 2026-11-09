@@ -50,3 +50,4 @@ auditLogSchema.index({ createdAt: -1 });
 
 const AuditLog = mongoose.model('AuditLog', auditLogSchema);
 module.exports = AuditLog;
+
