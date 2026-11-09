@@ -75,8 +75,8 @@ const apiLimiter = rateLimit({
 });
 app.use('/api/', apiLimiter);
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
+// Health check endpoints (both /api/health and /health)
+const healthHandler = (req, res) => {
   return ApiResponse.success(res, {
     message: 'Hotel Booking Management System API is healthy',
     data: {
@@ -85,12 +85,15 @@ app.get('/api/health', (req, res) => {
       status: 'UP',
     },
   });
-});
+};
+app.get('/api/health', healthHandler);
+app.get('/health', healthHandler);
 
 // Swagger Interactive API Documentation
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
-// Mount Application Routes
+// Mount Application Routes under /api
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
 app.use('/api/availability', availabilityRoutes);
@@ -98,6 +101,15 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/admin', adminRoutes);
+
+// Resilient fallback mounts directly at root (in case client omits /api prefix)
+app.use('/auth', authRoutes);
+app.use('/rooms', roomRoutes);
+app.use('/availability', availabilityRoutes);
+app.use('/bookings', bookingRoutes);
+app.use('/payments', paymentRoutes);
+app.use('/reports', reportRoutes);
+app.use('/admin', adminRoutes);
 
 // 404 Route Handler
 app.use('*', (req, res) => {

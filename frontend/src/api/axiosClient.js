@@ -1,13 +1,21 @@
 import axios from 'axios';
 
 const getBaseUrl = () => {
-  if (import.meta.env.VITE_API_URL) {
-    return import.meta.env.VITE_API_URL;
+  let url = import.meta.env.VITE_API_URL;
+  if (!url) {
+    if (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')) {
+      url = 'https://hotel-booking-management-system-backend-nak7.onrender.com/api';
+    } else {
+      return '/api';
+    }
   }
-  if (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')) {
-    return 'https://hotel-booking-management-system-backend-nak7.onrender.com/api';
+  // Remove trailing slashes
+  url = url.trim().replace(/\/+$/, '');
+  // If user provided base domain without /api, append /api
+  if (!url.endsWith('/api')) {
+    url += '/api';
   }
-  return '/api';
+  return url;
 };
 
 const api = axios.create({
