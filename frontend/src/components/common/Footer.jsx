@@ -20,8 +20,7 @@ export default function Footer() {
             <p className="text-xs leading-relaxed text-slate-400">
               Luxury coastal hospitality blending architectural elegance with seamless guest booking experiences.
             </p>
-            <div className="flex items-center gap-2 text-xs text-gold-400 font-semibold">
-              <ShieldCheck className="w-4 h-4" /> ALGIONS AI LABS Assessment Project
+            <div className="flex items-center gap-2 text-xs text-gold-400 font-semibold"> 
             </div>
           </div>
 
@@ -74,10 +73,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-900 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} Grand Azure Hotel Booking Management System. Built with MERN Stack.</p>
-          <p className="flex items-center gap-1 mt-2 md:mt-0">
+          <p>© {new Date().getFullYear()} Grand Azure Hotel Booking </p>
+          {/* <p className="flex items-center gap-1 mt-2 md:mt-0">
             Engineered with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> for Full-Stack Assessment
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
