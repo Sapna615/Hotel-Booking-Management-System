@@ -8,6 +8,7 @@ beforeAll(async () => {
   const binaryOpts = {};
   if (fs.existsSync('/opt/homebrew/bin/mongod')) {
     binaryOpts.systemBinary = '/opt/homebrew/bin/mongod';
+    binaryOpts.version = '8.2.2';
   }
 
   mongoServer = await MongoMemoryServer.create({
