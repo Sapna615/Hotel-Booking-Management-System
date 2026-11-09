@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "start": "npm --prefix backend start",
+    "build": "npm --prefix backend install",
     "install:all": "npm --prefix backend install && npm --prefix frontend install",
     "mongo": "mongod --dbpath ~/.mongodb_data --port 27017",
     "seed": "npm --prefix backend run seed",
