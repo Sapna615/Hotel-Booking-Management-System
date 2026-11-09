@@ -27,11 +27,27 @@ app.use(
   })
 );
 
-// CORS configuration (reflects origin to support credentials from Vercel & localhost)
+// CORS configuration
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:5001',
+  'https://hotel-booking-management-system-flax.vercel.app',
+];
+
 app.use(
   cors({
     origin: (origin, callback) => {
-      callback(null, true);
+      // Allow requests with no origin (e.g. mobile apps, curl, Swagger, server-to-server)
+      // or if origin is in the allowed list or is a Vercel preview deployment
+      if (
+        !origin ||
+        allowedOrigins.includes(origin) ||
+        origin.endsWith('.vercel.app')
+      ) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
     },
     credentials: true,
   })
