@@ -1,7 +1,9 @@
 # API Specification & Endpoint Documentation
 **API Protocol:** REST (HTTP/1.1 JSON)  
-**Base URL:** `http://localhost:5000/api`  
-**Interactive Swagger UI:** `http://localhost:5000/api/docs`  
+**Production Base URL:** `https://hotel-booking-management-system-backend-nak7.onrender.com/api`  
+**Production Swagger UI:** [https://hotel-booking-management-system-backend-nak7.onrender.com/api/docs](https://hotel-booking-management-system-backend-nak7.onrender.com/api/docs)  
+**Local Base URL:** `http://localhost:5001/api`  
+**Local Swagger UI:** `http://localhost:5001/api/docs`  
 **Authentication Scheme:** HTTP Bearer Header (`Authorization: Bearer <JWT_TOKEN>`)  
 
 ---

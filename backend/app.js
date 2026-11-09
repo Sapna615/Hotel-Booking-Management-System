@@ -21,12 +21,18 @@ const adminRoutes = require('./routes/adminRoutes');
 const app = express();
 
 // Security HTTP Headers
-app.use(helmet());
+app.use(
+  helmet({
+    crossOriginResourcePolicy: { policy: 'cross-origin' },
+  })
+);
 
-// CORS configuration
+// CORS configuration (reflects origin to support credentials from Vercel & localhost)
 app.use(
   cors({
-    origin: '*',
+    origin: (origin, callback) => {
+      callback(null, true);
+    },
     credentials: true,
   })
 );

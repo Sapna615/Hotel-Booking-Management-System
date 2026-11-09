@@ -1,7 +1,17 @@
 import axios from 'axios';
 
+const getBaseUrl = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  if (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')) {
+    return 'https://hotel-booking-management-system-backend-nak7.onrender.com/api';
+  }
+  return '/api';
+};
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: getBaseUrl(),
   headers: {
     'Content-Type': 'application/json',
   },
@@ -30,9 +40,11 @@ api.interceptors.response.use(
 
     if (error.response?.status === 401) {
       // If unauthorized on protected route, clean stale token
-      if (window.location.pathname.startsWith('/guest') ||
-          window.location.pathname.startsWith('/staff') ||
-          window.location.pathname.startsWith('/admin')) {
+      if (
+        window.location.pathname.startsWith('/guest') ||
+        window.location.pathname.startsWith('/staff') ||
+        window.location.pathname.startsWith('/admin')
+      ) {
         localStorage.removeItem('hb_token');
         localStorage.removeItem('hb_user');
       }
@@ -47,4 +59,3 @@ api.interceptors.response.use(
 );
 
 export default api;
-

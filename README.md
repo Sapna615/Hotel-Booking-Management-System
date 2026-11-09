@@ -6,6 +6,14 @@
 
 ---
 
+## 🌐 Live Production Deployment
+- **Frontend Live App (Vercel):** [https://hotel-booking-management-system-flax.vercel.app](https://hotel-booking-management-system-flax.vercel.app)
+- **Backend API Service (Render):** [https://hotel-booking-management-system-backend-nak7.onrender.com](https://hotel-booking-management-system-backend-nak7.onrender.com)
+- **Interactive Swagger Documentation:** [https://hotel-booking-management-system-backend-nak7.onrender.com/api/docs](https://hotel-booking-management-system-backend-nak7.onrender.com/api/docs)
+- **API Health Check:** [https://hotel-booking-management-system-backend-nak7.onrender.com/api/health](https://hotel-booking-management-system-backend-nak7.onrender.com/api/health)
+
+---
+
 ## 📖 Executive Summary
 **Grand Azure Hotel & Suites** is an end-to-end, database-backed hotel reservation management system engineered for high concurrency, rock-solid data integrity, and role-based operational workflows. 
 

@@ -7,6 +7,10 @@
   },
   "servers": [
     {
+      "url": "https://hotel-booking-management-system-backend-nak7.onrender.com",
+      "description": "Production Render Server"
+    },
+    {
       "url": "http://localhost:5001",
       "description": "Local Development Server"
     }
